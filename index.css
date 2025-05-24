@@ -1,0 +1,135 @@
+#gameArea {
+  position: relative;
+  width: 1300px;
+  height: 800px;
+  background-color: white;
+  overflow: hidden;
+}
+
+#field {
+  width: 1300px;
+  height: auto;
+}
+
+#title {
+  position: absolute;
+  left: 600px;
+  top: 200px;
+  background-color: transparent;
+  font-size: 70px;
+}
+
+#startButton {
+  position: absolute;
+  left: 600px;
+  top: 300px;
+  background-color: transparent;
+  font-size: 50px;
+}
+
+#grasses1 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 5px;
+}
+#grasses2 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 250px;
+}
+#grasses3 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 500px;
+}
+#grasses4 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 750px;
+}
+#grasses5 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 1000px;
+}
+#grasses6 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 1250px;
+}
+#grasses7 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 1500px;
+}
+#grasses8 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 1750px;
+}
+#grasses9 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 2000px;
+}
+#grasses10 {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  bottom: 10px;
+  left: 2250px;
+}
+
+#unicorn {
+  position: absolute;
+  bottom: 25px;
+  left: 70px;
+  width: 500px;
+}
+
+#question {
+  position: absolute;
+  bottom: 150px;
+  font-size: 80px;
+  left: 1450px;
+  color: white;
+}
+
+#gameOver {
+  position: absolute;
+  bottom: 300px;
+  font-size: 100px;
+  left: 350px;
+}
+
+#reStart {
+  position: absolute;
+  bottom: 200px;
+  font-size: 50px;
+  left: 380px;
+}
+
+#result {
+  position: absolute;
+  bottom: 100px;
+  font-size: 50px;
+  left: 380px;
+}
