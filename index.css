@@ -1,3 +1,4 @@
+
 #gameArea {
   position: relative;
   width: 1300px;
@@ -17,6 +18,7 @@
   top: 200px;
   background-color: transparent;
   font-size: 70px;
+  font-family: "メイリオ";
 }
 
 #startButton {
@@ -122,14 +124,14 @@
 
 #reStart {
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
   font-size: 50px;
   left: 380px;
 }
 
 #result {
   position: absolute;
-  bottom: 100px;
+  bottom: 220px;
   font-size: 50px;
-  left: 380px;
+  left: 470px;
 }
