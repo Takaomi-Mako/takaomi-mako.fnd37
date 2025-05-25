@@ -4,7 +4,6 @@
 //それぞれの要素を変数に代入
 const movingGrasses = document.getElementById("moving");
 const unicorn = document.getElementById('unicorn');
-const jumpUnicorn = document.getElementById('jumpUnicorn');
 const question = document.getElementById("question");
 const startButton = document.getElementById("startButton");
 const gameOverMes = document.getElementById("gameOver");
@@ -16,23 +15,58 @@ let questionInterval;
 const result = document.getElementById("result");
 result.style.display = "none";
 
+let correct = 0;
+
 //問題
 const questions = [
-  "lemon",
-  "grape",
-  "apple",
-  "blueberry",
-  "peach",
-  "strawberry",
-  "banana",
-  "kiwi",
-  "coconut",
-  "avocado",
+  "if",
+  "const",
+  "let",
+  "for",
+  "function",
+  "else",
+  "while",
+  "style",
+  "div",
+  "id",
+  "src",
+  "class",
+  "array",
+  "string",
+  "number",
+  "text",
+  "push",
+  "shift",
+  "console",
+  "get",
 ];
+
+// const questions = [
+//   "the",
+//   "a",
+//   "an",
+//   "is",
+//   "are",
+//   "was",
+//   "were",
+//   "i",
+//   "you",
+//   "he",
+//   "she",
+//   "it",
+//   "we",
+//   "they",
+//   "my",
+//   "your",
+//   "his",
+//   "her",
+//   "our",
+//   "their",
+// ]
 
 //草を動かす関数
 let grassesPosition = 0;
-const grassesSpeed = 4;
+let grassesSpeed = 4;
 
 function moveGrasses() {
   grassesPosition -= grassesSpeed;
@@ -46,12 +80,11 @@ function moveGrasses() {
 //草を動かす
 setInterval(moveGrasses, 1000 / 60);
 
-const questionSpeed = 3;
+let questionSpeed = 3;
 
 //問題をセットする関数
 function setQuestion() {
   question.innerText = questions[Math.floor(Math.random() * questions.length)];
-  questionPosition = 0;
 }
 
 //問題を動かす関数
@@ -66,6 +99,7 @@ function moveQuestion() {
     question.style.display = "none";
     gameOverMes.style.display = "block";
     reStart.style.display = "block";
+    result.innerText = `正解単語数:${correct}`;
     result.style.display = "block";
   }
 }
@@ -77,6 +111,9 @@ function resetGame() {
   unicorn.style.display = "block"; // ユニコーンを表示
   question.style.display = "block"; // 問題を表示
   question.innerText = ""; // 問題をクリア
+  questionSpeed = 3; //問題の早さをリセット
+  grassesSpeed = 3; //草むらの早さをリセット
+  correct = 0; //正解単語数をリセット
 }
 
 //Enterキーでゲーム開始
@@ -102,6 +139,11 @@ function gameStart(e) {
       //すべての文字を消した場合
       if (question.innerText.length === 0) {
         setQuestion();
+        questionPosition = 0;
+        question.style.transform = `translateX(${questionPosition}px)`;
+        questionSpeed += 0.2;
+        grassesSpeed += 0.2;
+        correct += 1;
       }    
     })
     //問題を動かす
