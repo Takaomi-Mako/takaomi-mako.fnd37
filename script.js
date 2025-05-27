@@ -62,7 +62,7 @@ const questions = [
   "her",
   "our",
   "their",
-]
+];
 
 //草を動かす関数
 let grassesPosition = 0;
