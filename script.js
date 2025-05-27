@@ -141,8 +141,8 @@ function gameStart(e) {
         setQuestion();
         questionPosition = 0;
         question.style.transform = `translateX(${questionPosition}px)`;
-        questionSpeed += 0.2;
-        grassesSpeed += 0.2;
+        questionSpeed += 0.4;
+        grassesSpeed += 0.4;
         correct += 1;
       }    
     })
