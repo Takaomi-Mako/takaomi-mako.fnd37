@@ -18,51 +18,51 @@ result.style.display = "none";
 let correct = 0;
 
 //問題
-const questions = [
-  "if",
-  "const",
-  "let",
-  "for",
-  "function",
-  "else",
-  "while",
-  "style",
-  "div",
-  "id",
-  "src",
-  "class",
-  "array",
-  "string",
-  "number",
-  "text",
-  "push",
-  "shift",
-  "console",
-  "get",
-];
-
 // const questions = [
-//   "the",
-//   "a",
-//   "an",
-//   "is",
-//   "are",
-//   "was",
-//   "were",
-//   "i",
-//   "you",
-//   "he",
-//   "she",
-//   "it",
-//   "we",
-//   "they",
-//   "my",
-//   "your",
-//   "his",
-//   "her",
-//   "our",
-//   "their",
-// ]
+//   "if",
+//   "const",
+//   "let",
+//   "for",
+//   "function",
+//   "else",
+//   "while",
+//   "style",
+//   "div",
+//   "id",
+//   "src",
+//   "class",
+//   "array",
+//   "string",
+//   "number",
+//   "text",
+//   "push",
+//   "shift",
+//   "console",
+//   "get",
+// ];
+
+const questions = [
+  "the",
+  "a",
+  "an",
+  "is",
+  "are",
+  "was",
+  "were",
+  "i",
+  "you",
+  "he",
+  "she",
+  "it",
+  "we",
+  "they",
+  "my",
+  "your",
+  "his",
+  "her",
+  "our",
+  "their",
+]
 
 //草を動かす関数
 let grassesPosition = 0;
@@ -141,8 +141,8 @@ function gameStart(e) {
         setQuestion();
         questionPosition = 0;
         question.style.transform = `translateX(${questionPosition}px)`;
-        questionSpeed += 0.4;
-        grassesSpeed += 0.4;
+        questionSpeed += 0.3;
+        grassesSpeed += 0.3;
         correct += 1;
       }    
     })
